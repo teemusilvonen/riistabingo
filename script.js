@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         domtoimage.toJpeg(bingoGrid, options)
             .then(function (dataUrl) {
                 const link = document.createElement('a');
-                link.download = 'riistabingo.jpeg';
+                link.download = 'riistabingokortti.jpeg';
                 link.href = dataUrl;
                 link.classList.add('download-link');
                 link.textContent = 'Lataa bingokortti';
@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createBingoGrid(gameAnimals);
 
 });
+
 
 
 
