@@ -28,7 +28,7 @@ h1 {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px;
     width: 90vw;
-    max-width: 800px;
+    max-width: 1200px;
     aspect-ratio: 1 / 1;
     border: 3px solid #333;
     padding: 5px;
@@ -87,4 +87,5 @@ h1 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+
 }
