@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadContainer = document.getElementById('downloadContainer');
 
     const gameAnimals = [
-        { path: 'kuvat/Pyy.png', name: 'Pyy' },
+        { path: 'riistabingo/kuvat/Pyy.png', name: 'Pyy' },
         { path: 'kuvat/riekko.png', name: 'Riekko' },
         { path: 'kuvat/minkki.png', name: 'Minkki' },
         { path: 'kuvat/orava.png', name: 'Orava' },
@@ -109,5 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createBingoGrid(gameAnimals);
 
 });
+
 
 
