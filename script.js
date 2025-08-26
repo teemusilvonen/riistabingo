@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadContainer = document.getElementById('downloadContainer');
 
     const gameAnimals = [
-        { path: 'kuvat/Pyy.png', name: 'Pyy' },
-        { path: 'kuvat/Riekko.png', name: 'Riekko' },
-        { path: 'kuvat/Minkki.png', name: 'Minkki' },
-        { path: 'kuvat/Orava.png', name: 'Orava' },
-        { path: 'kuvat/Lehtokurppa.png', name: 'Lehtokurppa' },
+        { path: 'kuvat/pyy.png', name: 'Pyy' },
+        { path: 'kuvat/riekko.png', name: 'Riekko' },
+        { path: 'kuvat/minkki.png', name: 'Minkki' },
+        { path: 'kuvat/orava.png', name: 'Orava' },
+        { path: 'kuvat/lehtokurppa.png', name: 'Lehtokurppa' },
         { path: 'kuvat/tavi.png', name: 'Tavi' },
         { path: 'kuvat/sepelkyyhky.png', name: 'Sepelkyyhky' },
         { path: 'kuvat/fasaani.png', name: 'Fasaani' },
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: 'kuvat/metsakauris.png', name: 'Metsäkauris' },
         { path: 'kuvat/itamerennorppa-harmaahylje.png', name: 'Hylje tai Norppa' },
         { path: 'kuvat/villisika.png', name: 'Villisika' },
-        { path: 'kuvat/Valkohantapeura.png', name: 'Valkohäntäpeura' },
-        { path: 'kuvat/Hirvi.png', name: 'Hirvi' }
+        { path: 'kuvat/valkohantapeura.png', name: 'Valkohäntäpeura' },
+        { path: 'kuvat/hirvi.png', name: 'Hirvi' }
     ];
 
     const shuffleArray = (array) => {
@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createBingoGrid(gameAnimals);
 
 });
+
 
 
 
