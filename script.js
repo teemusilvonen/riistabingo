@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadContainer = document.getElementById('downloadContainer');
 
     const gameAnimals = [
-        { path: 'kuvat/pyy.png', name: 'Pyy' },
+        { path: 'riistabingo/kuvat/pyy.png', name: 'Pyy' },
         { path: 'kuvat/riekko.png', name: 'Riekko' },
         { path: 'kuvat/minkki.png', name: 'Minkki' },
         { path: 'kuvat/orava.png', name: 'Orava' },
@@ -107,4 +107,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Luo alkuperäinen ruudukko sivun latautuessa
     shuffleArray(gameAnimals);
     createBingoGrid(gameAnimals);
+
 });
