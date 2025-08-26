@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadContainer = document.getElementById('downloadContainer');
 
     const gameAnimals = [
-        { path: 'riistabingo/kuvat/pyy.png', name: 'Pyy' },
+        { path: 'kuvat/Pyy.png', name: 'Pyy' },
         { path: 'kuvat/riekko.png', name: 'Riekko' },
         { path: 'kuvat/minkki.png', name: 'Minkki' },
         { path: 'kuvat/orava.png', name: 'Orava' },
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: 'kuvat/metsakauris.png', name: 'Metsäkauris' },
         { path: 'kuvat/itamerennorppa-harmaahylje.png', name: 'Hylje tai Norppa' },
         { path: 'kuvat/villisika.png', name: 'Villisika' },
-        { path: 'https://teemusilvonen.github.io/riistabingo/kuvat/valkohantapeura.png', name: 'Valkohäntäpeura' },
-        { path: 'kuvat/hirvi.png', name: 'Hirvi' }
+        { path: 'kuvat/Valkohantapeura.png', name: 'Valkohäntäpeura' },
+        { path: 'kuvat/Hirvi.png', name: 'Hirvi' }
     ];
 
     const shuffleArray = (array) => {
@@ -109,4 +109,5 @@ document.addEventListener('DOMContentLoaded', () => {
     createBingoGrid(gameAnimals);
 
 });
+
 
