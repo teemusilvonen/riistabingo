@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: 'kuvat/metsakauris.png', name: 'Metsäkauris' },
         { path: 'kuvat/itamerennorppa-harmaahylje.png', name: 'Hylje tai Norppa' },
         { path: 'kuvat/villisika.png', name: 'Villisika' },
-        { path: 'kuvat/valkohantapeura.png', name: 'Valkohäntäpeura' },
+        { path: 'https://teemusilvonen.github.io/riistabingo/kuvat/valkohantapeura.png', name: 'Valkohäntäpeura' },
         { path: 'kuvat/hirvi.png', name: 'Hirvi' }
     ];
 
@@ -109,3 +109,4 @@ document.addEventListener('DOMContentLoaded', () => {
     createBingoGrid(gameAnimals);
 
 });
+
