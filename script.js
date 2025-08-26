@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const gameAnimals = [
         { path: 'kuvat/Pyy.png', name: 'Pyy' },
-        { path: 'kuvat/riekko.png', name: 'Riekko' },
-        { path: 'kuvat/minkki.png', name: 'Minkki' },
-        { path: 'kuvat/orava.png', name: 'Orava' },
-        { path: 'kuvat/lehtokurppa.png', name: 'Lehtokurppa' },
+        { path: 'kuvat/Riekko.png', name: 'Riekko' },
+        { path: 'kuvat/Minkki.png', name: 'Minkki' },
+        { path: 'kuvat/Orava.png', name: 'Orava' },
+        { path: 'kuvat/Lehtokurppa.png', name: 'Lehtokurppa' },
         { path: 'kuvat/tavi.png', name: 'Tavi' },
         { path: 'kuvat/sepelkyyhky.png', name: 'Sepelkyyhky' },
         { path: 'kuvat/fasaani.png', name: 'Fasaani' },
@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createBingoGrid(gameAnimals);
 
 });
+
 
 
 
