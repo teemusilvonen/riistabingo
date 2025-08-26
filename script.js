@@ -74,30 +74,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const createDownloadImage = () => {
-        downloadContainer.innerHTML = '';
-        const options = {
-            quality: 0.95,
-            width: bingoGrid.offsetWidth,
-            height: bingoGrid.offsetHeight,
-            style: {
-                'background-color': '#ffffff'
-            }
-        };
 
-        domtoimage.toJpeg(bingoGrid, options)
-            .then(function (dataUrl) {
-                const link = document.createElement('a');
-                link.download = 'riistabingokortti.jpeg';
-                link.href = dataUrl;
-                link.classList.add('download-link');
-                link.textContent = 'Lataa bingokortti';
-                downloadContainer.appendChild(link);
-            })
-            .catch(function (error) {
-                console.error('Kuvan luonti epäonnistui!', error);
-            });
+const createDownloadImage = () => {
+    downloadContainer.innerHTML = '';
+    
+    // Hae nykyinen ruudukon tyyli
+    const originalGridStyle = bingoGrid.style.cssText;
+    
+    // Aseta ruudukon koko 3000x3000 pikseliin
+    bingoGrid.style.width = '3000px';
+    bingoGrid.style.height = '3000px';
+    
+    const options = {
+        quality: 1.0, // Käytä parasta mahdollista laatua
+        width: 3000,
+        height: 3000,
+        style: {
+            'background-color': '#ffffff'
+        }
     };
+
+    domtoimage.toJpeg(bingoGrid, options)
+        .then(function (dataUrl) {
+            // Palauta ruudukon alkuperäinen koko
+            bingoGrid.style.cssText = originalGridStyle;
+            
+            const link = document.createElement('a');
+            link.download = 'riistabingo.jpeg';
+            link.href = dataUrl;
+            link.classList.add('download-link');
+            link.textContent = 'Lataa bingokortti (3000x3000px)';
+            downloadContainer.appendChild(link);
+        })
+        .catch(function (error) {
+            // Palauta ruudukon alkuperäinen koko myös virhetilanteessa
+            bingoGrid.style.cssText = originalGridStyle;
+            console.error('Kuvan luonti epäonnistui!', error);
+        });
+};
+
 
     startButton.addEventListener('click', () => {
         shuffleArray(gameAnimals);
@@ -109,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createBingoGrid(gameAnimals);
 
 });
+
 
 
 
