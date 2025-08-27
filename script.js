@@ -76,27 +76,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const createDownloadImage = () => {
-        downloadContainer.innerHTML = '';
-        const options = {
-            quality: 0.95,
-            style: {
-                'background-color': '#ffffff'
-            }
-        };
-
-        domtoimage.toJpeg(bingoGrid, options)
-            .then(function (dataUrl) {
-                const link = document.createElement('a');
-                link.download = 'riistabingo.jpeg';
-                link.href = dataUrl;
-                link.classList.add('download-link');
-                link.textContent = 'Lataa bingokortti';
-                downloadContainer.appendChild(link);
-            })
-            .catch(function (error) {
-                console.error('Kuvan luonti epäonnistui!', error);
-            });
+    downloadContainer.innerHTML = '';
+    
+    // Nämä uudet asetukset parantavat kuvan laatua
+    const options = {
+        quality: 1.0, // Käytä parasta laatua (0.0 - 1.0)
+        width: bingoGrid.offsetWidth * 2, // Skaalaa leveys 2x suuremmaksi
+        height: bingoGrid.offsetHeight * 2, // Skaalaa korkeus 2x suuremmaksi
+        style: {
+            'background-color': '#ffffff',
+            transform: 'scale(2)',
+            transformOrigin: 'top left'
+        }
     };
+
+    domtoimage.toJpeg(bingoGrid, options)
+        .then(function (dataUrl) {
+            const link = document.createElement('a');
+            link.download = 'riistabingo.jpeg';
+            link.href = dataUrl;
+            link.classList.add('download-link');
+            link.textContent = 'Lataa bingokortti (parempi laatu)';
+            downloadContainer.appendChild(link);
+        })
+        .catch(function (error) {
+            console.error('Kuvan luonti epäonnistui!', error);
+        });
+};
 
 
     startButton.addEventListener('click', () => {
@@ -109,6 +115,7 @@ const createDownloadImage = () => {
     createBingoGrid(gameAnimals);
 
 });
+
 
 
 
